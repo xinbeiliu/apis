@@ -46,7 +46,9 @@ def find_afterparties():
         # - (Make sure to save the JSON data from the response to the data
         #   variable so that it can display on the page as well.)
 
-        data = {'This': ['Some', 'mock', 'JSON']}
+        payload = {'q': query, 'location.address': location, 'location.within': distance, 
+                   'sort_by': sort}
+
         events = []
 
         return render_template("afterparties.html",
